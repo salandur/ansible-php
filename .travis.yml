@@ -21,11 +21,13 @@ before_install:
   - sudo docker pull ${distribution}:${distribution}${version}
   - sudo docker build --rm=true --file=tests/Dockerfile.${distribution}-${version} --tag=${distribution}-${version}:ansible tests
 
-script:
+before_script:
   # Create container_id
   - container_id=$(mktemp)
   # Run container in detached mode
   - sudo docker run --detach --volume="${PWD}":/etc/ansible/roles/salandur.php:ro ${run_opts} ${distribution}-${version}:ansible "${init}" > "${container_id}"
+
+script:
   # Basic role syntax check
   - sudo docker exec --tty "$(cat ${container_id})" env TERM=xterm ansible-playbook /etc/ansible/roles/salandur.php/tests/test.yml --syntax-check
 
@@ -42,6 +44,7 @@ script:
   # Check installations
   - sudo docker exec "$(cat ${container_id})" which php
 
+after_script:
   # Clean up
   - sudo docker stop "$(cat ${container_id})"
   - sudo docker rm -v $(cat ${container_id})
