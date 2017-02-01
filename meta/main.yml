@@ -3,12 +3,12 @@
 galaxy_info:
   author: Jeroen Ruijgers
   company: Salandur
-  description: Manages apache
+  description: Manages server
   license: MIT
   platforms:
-  - name: CentOS
+  - name: EL
     versions:
-    - all
+    - 6
   categories:
   - php
 
