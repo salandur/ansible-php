@@ -9,8 +9,6 @@
 
 - name: set short_open_tag configration
   template: src=short_open_tag.ini.j2 dest=/etc/php.d/short_open_tag.ini
-  notify: restart HTTPD
 
 - name: set error configuration
   template: src=php_errors.ini.j2 dest=/etc/php.d/php_errors.ini
-  notify: restart HTTPD
