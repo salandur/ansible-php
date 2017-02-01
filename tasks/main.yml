@@ -1,0 +1,16 @@
+--- # salandur.php tasks
+
+- name: install PHP
+  package: name=php state=latest
+
+- name: install aditional PHP modules
+  package: name=php-{{ item }} state=present
+  with_items: "{{ php_modules }}"
+
+- name: set short_open_tag configration
+  template: src=short_open_tag.ini.j2 dest=/etc/php.d/short_open_tag.ini
+  notify: restart HTTPD
+
+- name: set error configuration
+  template: src=php_errors.ini.j2 dest=/etc/php.d/php_errors.ini
+  notify: restart HTTPD

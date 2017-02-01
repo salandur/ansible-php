@@ -1,0 +1,15 @@
+--- # salandur.php meta
+
+dependencies: []
+
+galaxy_info:
+  author: Jeroen Ruijgers
+  company: Salandur
+  description: Manages apache
+  license: MIT
+  platforms:
+  - name: CentOS
+    versions:
+    - all
+  categories:
+  - php

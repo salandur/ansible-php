@@ -15,6 +15,10 @@ Ansible role to manage PHP
 ### Variables
 
 ```yaml
+php_modules: []
+php_short_open_tag: Off
+php_display_errors: Off
+php_error_reporting: E_ALL & ~E_DEPRECATED
 ```
 
 ### License
