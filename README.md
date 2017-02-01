@@ -1,6 +1,8 @@
 salandur.php
 ============
 
+[![Build Status](https://travis-ci.org/salandur/salandur.postfix.svg?branch=master)](https://travis-ci.org/salandur/salandur.postfix)
+
 Ansible role to manage PHP
 
 ### Example:
