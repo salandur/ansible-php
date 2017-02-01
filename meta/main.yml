@@ -3,7 +3,7 @@
 galaxy_info:
   author: Jeroen Ruijgers
   company: Salandur
-  description: Manages server
+  description: Manages PHP
   license: MIT
   platforms:
   - name: EL
