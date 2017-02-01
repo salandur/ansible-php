@@ -1,7 +1,5 @@
 --- # salandur.php meta
 
-dependencies: []
-
 galaxy_info:
   author: Jeroen Ruijgers
   company: Salandur
@@ -13,3 +11,5 @@ galaxy_info:
     - all
   categories:
   - php
+
+dependencies: []
