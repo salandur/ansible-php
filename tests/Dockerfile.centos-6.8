@@ -2,6 +2,7 @@ FROM centos:6.8
 
 # Run updates
 RUN yum update -y
+RUN yum -y install epel-release
 
 ### Install ansible
 # Install python prerequisites
