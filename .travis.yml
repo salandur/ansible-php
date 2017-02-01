@@ -36,7 +36,7 @@ script:
 
   # Second run Idempotence test
   - >
-    sudo docker exec "$(cat ${container_id})" ansible-playbook tests/test.yml -i tests/inventory
+    sudo docker exec "$(cat ${container_id})" ansible-playbook /etc/ansible/roles/salandur.php/tests/test.yml
     | grep -q 'changed=0.*failed=0'
     && (echo 'Idempotence test: pass' && exit 0)
     || (echo 'Idempotence test: fail' && exit 1)
