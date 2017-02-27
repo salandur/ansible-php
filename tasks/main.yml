@@ -1,7 +1,7 @@
 --- # salandur.php tasks
 
 - name: install PHP
-  package: name=php state=latest
+  package: name=php-cli state=latest
 
 - name: install aditional PHP modules
   package: name=php-{{ item }} state=present
