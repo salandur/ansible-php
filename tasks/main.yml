@@ -4,7 +4,7 @@
   package: name=php-cli state=latest
 
 - name: install aditional PHP modules
-  package: name=php-{{ item }} state=present
+  package: name={{ item }} state=present
   with_items: "{{ php_modules }}"
 
 - name: set short_open_tag configration
